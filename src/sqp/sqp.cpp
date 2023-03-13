@@ -1,5 +1,5 @@
 #include "../../include/mini_optim_bits/sqp.h"
-#include <iostream>
+
 using namespace mini_optim;
 using namespace std;
 
@@ -12,7 +12,6 @@ sqp_o mini_optim::sqp(const sqp_i &input)
     unsigned iter = 0;
     while (true)
     {
-        cout<<iter<<endl;
         iter++;
         auto A = input.A, Aeq = input.Aeq;
         auto g = grad(input.f, x);
